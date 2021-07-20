@@ -149,3 +149,9 @@ Pontos.prototype.r = function(){
 };
 
 //console.log(ponto1.r())
+
+//Diferenças de let e var
+
+//var = permite declarações repetidas no mesmo bloco, permite duas variáveis com o mesmo nome no mesmo bloco, são levadas para o início do bloco (hoisting)
+
+//let = não permite declarações repetidas no mesmo bloco, não permite duas variáveis com o mesmo nome no mesmo bloco, também há o hoisting, mas o acesso só é permitido após atribuição

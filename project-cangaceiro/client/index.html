@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta lang="pt-BR">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Negociações</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+</head>
+
+<body class="container">
+    <h1 class="text-center">Negociações</h1><form class="form">
+        <div class="form-group">
+            <label for="data">Data</label>
+            <input type="date" id="data" class="form-control" required autofocus/>
+        </div>
+
+        <div class="form-group">
+            <label for="quantidade">Quantidade</label>
+            <input type="number" min="1" step="1" id="quantidade" class="form-control" value="1" required/>
+        </div>
+
+        <div class="form-group">
+            <label for="valor">Valor</label>
+            <input id="valor" type="number" class="form-control" min="0.01" step="0.01" value="0.0" required />
+        </div>
+
+        <button class="btn btn-primary" type="submit">Incluir</button>
+
+    </form>
+
+    <div class="text-center">
+        <button id="botao-importa" class="btn btn-primary text-center" type="button">Importar Negociações</button>
+        <button id="botao-apaga" class="btn btn-primary text-center" type="button">Apagar</button>
+    </div>
+
+    <br>
+    <br>
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+            
+                <th>DATA</th>
+                <th>QUANTIDADE</th>
+                <th>VALOR</th><th>VOLUME</th>
+                </tr>
+        </thead>
+
+        <tbody>
+        </tbody>
+
+        <tfoot>
+        </tfoot>
+    </table>
+    <!--<script src="app/index.js"></script>-->
+    <script src="app/domain/negociacao/Negociacao.js"></script>
+    <script>
+
+        
+        //Declaração com var
+        //var negociacao1 = new Negociacao(new Date(), 15, 590.00);
+
+        let hoje = new Date();
+        let negociacao1 = new Negociacao(hoje, 15, 590.00);
+        
+        console.log(negociacao1.data);
+        console.log(negociacao1.quantidade);
+        console.log(negociacao1.valor);
+        console.log(negociacao1.volume);
+
+        
+        //Tentando alterar data
+        /*var novaData = new Date();
+        novaData.setDate(31);
+        negociacao1.data = novaData;
+        
+        negociacao1.data.setDate(31); //funcionou
+        
+        console.log(negociacao1.data)*/
+
+
+        //Metodos definidos como getMetodo()
+        /*console.log(negociacao1.getData());
+        console.log(negociacao1.getQuantidade());
+        console.log(negociacao1.getValor());
+        console.log(negociacao1.getVolume());*/
+
+        /*var volume = negociacao1.quantidade * negociacao1.valor;
+        var volume = negociacao1.getVolume();
+        console.log(volume);*/
+
+        //Sem a definição de métodos, apenas do contrutor
+        /*var negociacao1 = new Negociacao();
+        negociacao1.data = new Date();
+        negociacao1.quantidade = 10;
+        negociacao1.valor = 150.00;
+        console.log(negociacao1);*/
+
+        /*var negociacao2 = new Negociacao();
+        negociacao2.quantidade = 20;
+        console.log(negociacao2);*/
+
+    </script>
+</body>
+</html>
