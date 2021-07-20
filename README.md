@@ -1,1 +1,1 @@
-This is a repository for sharing JavaScript personal studies.
+This is a repository for sharing JavaScript personal studies and projects.
